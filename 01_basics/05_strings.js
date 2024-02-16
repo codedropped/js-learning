@@ -1,10 +1,10 @@
-// making console.log() s shortcut normal function with variable
+// making console.log() shortcut by using normal function with variable
 let print = function(abc){
     console.log(abc)
 }
 console.log(typeof print); // display the type of this variable
 
-// making console.log() s shortcut arrow function with variable
+// making console.log() shortcut by using arrow function with variable
 let display = (xyz) => {
     console.log(xyz + " (by display function)")
 }
