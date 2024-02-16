@@ -95,5 +95,36 @@ let heading = "heading"
 let headingToBoolean = Boolean(heading)
 console.log(headingToBoolean); // output => true
 console.log(typeof headingToBoolean); // output => boolean
-console.log("") // we are using this to make an space into the console to understand our output
+console.log("") // we are using this to make an space into the console to understand our output.
 
+
+/********************* Operations ************************** */
+
+let text1 = "Hello "
+let text2 = "Akon"
+let text3 = text1+text2
+console.log(text3); // output => Hello Akon
+
+console.log(1+2); // output => 3
+console.log(1+"2"); // output => 12
+console.log("1"+2); // output => 12
+console.log(1+2+"5"); // output => 35
+console.log("5"+2+1); // output => 521
+
+console.log(5+(2+96)-15*1/8); // output =>
+
+console.log(true); // output => true
+console.log(+true); // output => 1
+console.log(+""); // output => true
+
+let num1, num2, num3
+num1 = num2 = num3 = 2+2
+console.table([num1,num2,num3]) // output => 4,4,4
+
+let gameCount = 100
+gameCount++; // postfix
+console.log(gameCount); // output => 101
+
+let Count = 100
+++Count; // prefix
+console.log(Count); // output => 101
