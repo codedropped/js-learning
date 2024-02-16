@@ -49,5 +49,40 @@ console.log("") // we are using this to make an space into the console to unders
 // output => blank space
 
 let alphaNumaricToNumber = Number(alphaNumaric) 
-console.log(alphaNumaricToNumber); // output => NaN
+console.log(alphaNumaricToNumber); // output => NaN(Not a Number)
 console.log(typeof alphaNumaricToNumber); // output => number
+console.log("") // we are using this to make an space into the console to understand our output
+
+let amount = null
+let nullToNumber = Number(amount) 
+console.log(nullToNumber); // output => 0
+console.log(typeof nullToNumber); // output => number
+console.log("") // we are using this to make an space into the console to understand our output
+
+let nullToString = String(amount)
+console.log(nullToString); // output => null
+console.log(typeof(nullToString)); // output => string
+console.log("") // we are using this to make an space into the console to understand our output
+
+let bool = true
+console.log(bool); // output => true
+console.log(typeof bool); // output => boolean
+console.log("") // we are using this to make an space into the console to understand our output
+
+let boolToNumber = Number(bool)
+console.log(boolToNumber); // output => 1 (for true) and 0 (for false)
+console.log(typeof boolToNumber); // output => number
+console.log("") // we are using this to make an space into the console to understand our output
+
+let boolToString = String(bool)
+console.log(boolToString); // output => true
+console.log(typeof boolToString); // output => string
+console.log("") // we are using this to make an space into the console to understand our output
+
+let digit = 1 
+let digitToBool = Boolean(digit)
+console.log(digitToBool); // output => if 1 then true and if 0 then false
+console.log(typeof digitToBool); // output => boolean
+console.log("") // we are using this to make an space into the console to understand our output
+
+
