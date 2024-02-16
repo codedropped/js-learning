@@ -11,21 +11,32 @@ let display = (xyz) => {
 console.log(typeof display);// display the type of this variable
 display("") // we can use print("") function as well
 
+
+
+
+
+
+
 const name = "Akon"
 const nameObj = new String(name)
-display(`Length of name is ${name.length}`)
+const newNameObj = new String('Barak Obama')
+const sentence = 'The quick brown fox jumps over the lazy dog.'
+
+// display(anchor(newName)) // Deprecated. Means, this feature is no longer recommended.
+
+print(sentence.at(4));
+
+display(sentence.big()); // Deprecated. Means, this feature is no longer recommended.
+
+print(sentence.blink()); // Deprecated. Means, this feature is no longer recommended.
+
+display(sentence.bold()); // Deprecated. Means, this feature is no longer recommended.
+
+print(sentence.charAt(10));
+
+display(sentence.charCodeAt()); /// dont understand
+
 print(nameObj.toUpperCase());
 display(nameObj.toLowerCase());
 print(`Length of nameObj is ${nameObj.length}`);
-
-const newName = new String('Barak Obama')
-
-display(name);
-print(nameObj);
-display(newName);
-
-print(nameObj)
-display(newName)
-
-display(newName.concat(name))
-
+print(newNameObj.concat(name))
