@@ -1,5 +1,5 @@
 // making console.log() shortcut by using normal function with variable
-let print = function(abc){
+let print = function (abc) {
     console.log(abc)
 }
 console.log(typeof print); // display the type of this variable
@@ -26,4 +26,6 @@ display(newName);
 
 print(nameObj)
 display(newName)
+
+display(newName.concat(name))
 
