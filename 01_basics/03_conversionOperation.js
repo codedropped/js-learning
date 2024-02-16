@@ -85,4 +85,15 @@ console.log(digitToBool); // output => if 1 then true and if 0 then false
 console.log(typeof digitToBool); // output => boolean
 console.log("") // we are using this to make an space into the console to understand our output
 
+let age = ""
+let ageToBoolean = Boolean(age)
+console.log(ageToBoolean); // output => false // though this is empty string and usually it contains empty space but for boolean it shows us false because here need content. So, if we give an space or text between double quotation then the value will true. 
+console.log(typeof ageToBoolean); // output => boolean
+console.log("") // we are using this to make an space into the console to understand our output
+
+let heading = "heading"
+let headingToBoolean = Boolean(heading)
+console.log(headingToBoolean); // output => true
+console.log(typeof headingToBoolean); // output => boolean
+console.log("") // we are using this to make an space into the console to understand our output
 
