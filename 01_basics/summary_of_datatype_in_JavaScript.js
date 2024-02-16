@@ -24,13 +24,17 @@ console.log(symbol === anotherSymbol); // output => false
 // Non Primitive Data Types
 // Arrays, Objects, Functions
 
-let arrays = ["Akon", 5, "Male"]; // arrays data type
+let arrays = ["Akon", 5, "Male"]; // array object data type
+console.log(typeof arrays);
+
 let object = {
     name: "Akon",
     age: 5,
     gender: "Male"
 }; // object data type
+console.log(typeof object);
 
 const myFunction = function(){
     console.log("Hello World");
 }; // function data type
+console.log(typeof myFunction);
