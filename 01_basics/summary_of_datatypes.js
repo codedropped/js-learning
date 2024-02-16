@@ -1,8 +1,6 @@
-/*****************Data Type Summary******************/
-// Data types in Java Script 
+/*****************DataType Summary******************/
+
 // Two types of Data Types
-
-
 
 // Primitive Data Types
 // These are the following data types::
@@ -18,7 +16,6 @@ let symbol = Symbol("321"); // symbol data type
 let anotherSymbol = Symbol("321"); // symbol data type
 
 console.log(symbol === anotherSymbol); // output => false
-
 
 
 // Non Primitive Data Types
