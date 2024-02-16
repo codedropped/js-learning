@@ -138,3 +138,12 @@ let Count = 100
 ++Count; // prefix
 console.log(Count); // output => 101
 console.log("") // we are using this to make an space into the console to understand our output.
+
+
+let x = 3
+let y = x++;
+console.log(`x:${x} and y:${y}`); // output => x:4 and y:3
+
+let a = 3
+let b = ++a;
+console.log(`a:${a} and b:${b}`); // output => a:4 and b:4
