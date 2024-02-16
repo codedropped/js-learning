@@ -22,8 +22,32 @@ const nameObj = new String(name)
 const newNameObj = new String('Barak Obama')
 const sentence = 'The quick brown fox jumps over the lazy dog.'
 const sentence1 = 'The quick brown fox jumps over the lazy dog.'
+const name1 = '\u0041\u006d\u00e9\u006c\u0069\u0065';
+const name2 = '\u0041\u006d\u0065\u0301\u006c\u0069\u0065';
+const filePath = 'https://google.com'
 
 
+
+
+display(sentence.replaceAll('o', 'A'))
+
+display(sentence.replace('the', 'A'))
+
+display(sentence.repeat(2))
+
+// display(filePath.raw`https://google.com`) /// dont understand
+
+//
+display(sentence.padStart(60, '*').padEnd(80, '*'))
+display(sentence.padStart(50, '*'))
+display(sentence.padEnd(70, '.'))
+//
+
+//
+display(name1)
+display(name2)
+display(name1.normalize('NFC') == name2.normalize('NFC'))
+//
 
 display(sentence.matchAll(sentence1)) /// dont understand
 
