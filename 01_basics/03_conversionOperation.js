@@ -117,8 +117,11 @@ console.log(5+(2+96)-15*1/8); // output => 101.125
 console.log("") // we are using this to make an space into the console to understand our output.
 
 console.log(true); // output => true
+console.log(typeof true); // output => number
 console.log(+true); // output => 1
+console.log(typeof +true); // output => number
 console.log(+""); // output => 0
+console.log(typeof +""); // output => number
 console.log("") // we are using this to make an space into the console to understand our output.
 
 let num1, num2, num3
