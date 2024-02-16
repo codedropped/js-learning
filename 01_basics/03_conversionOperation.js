@@ -141,9 +141,9 @@ console.log("") // we are using this to make an space into the console to unders
 
 
 let x = 3
-let y = x++;
+let y = x++; // postfix
 console.log(`x:${x} and y:${y}`); // output => x:4 and y:3
 
 let a = 3
-let b = ++a;
+let b = ++a; // prefix
 console.log(`a:${a} and b:${b}`); // output => a:4 and b:4
