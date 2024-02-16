@@ -18,7 +18,7 @@ let anotherSymbol = Symbol("321"); // symbol data type
 console.log(symbol === anotherSymbol); // output => false
 
 
-// Non Primitive Data Types
+// Non Primitive or Reference Data Types
 // Arrays, Objects, Functions
 
 let arrays = ["Akon", 5, "Male"]; // array object data type
