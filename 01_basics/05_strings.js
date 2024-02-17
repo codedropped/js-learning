@@ -1,6 +1,6 @@
 // making console.log() shortcut by using normal function with variable
 let print = function (abc) {
-    console.log(abc)
+    console.log(abc + " (by print function")
 }
 // console.log(typeof print); // display the type of this variable // output => function
 
@@ -30,13 +30,13 @@ const number = 456;
 
 
 
-display(sentence.valueOf())
+display(sentence.valueOf());
 
-display(sentence1.trimStart())
+print(sentence1.trimStart());
 
-display(sentence1.trimEnd())
+display(sentence1.trimEnd());
 
-display(sentence1.trim());
+print(sentence1.trim());
 
 display(sentence.toWellFormed());
 
@@ -44,75 +44,75 @@ print(nameObj.toUpperCase());
 
 //
 display(number.toString());
-display(typeof (number.toString()));
+print(typeof (number.toString()));
 //
 
 display(nameObj.toLowerCase());
 
-display(sentence.toLocaleUpperCase())
+print(sentence.toLocaleUpperCase());
 
 display(sentence.toLocaleLowerCase());
 
-display(sentence.sup()); // Deprecated. This feature is no longer recommended.
+print(sentence.sup()); // Deprecated. This feature is no longer recommended.
 
 display(sentence.substring(5, 25));
 
-display(sentence.substr(5, 20)); // Deprecated. This feature is no longer recommended.
+print(sentence.substr(5, 20)); // Deprecated. This feature is no longer recommended.
 
 display(sentence.sub()); // Deprecated. This feature is no longer recommended.
 
-display(sentence.strike()); // Deprecated. This feature is no longer recommended.
+print(sentence.strike()); // Deprecated. This feature is no longer recommended.
 
 display(sentence.startsWith('f', 16)); // the output will be boolean. // output => true
 
 //
-display(sentence.split('a'));
+print(sentence.split('a'));
 display(sentence.split(" "));
 //
 
-display(sentence.small()); //Deprecated. This feature is no longer recommended.
+print(sentence.small()); //Deprecated. This feature is no longer recommended.
 
 display(sentence.slice(5, 25));
 
-display(sentence.search('brown'));
+print(sentence.search('brown'));
 
 display(sentence.replaceAll('o', 'A'));
 
-display(sentence.replace('the', 'A'));
+print(sentence.replace('the', 'A'));
 
 display(sentence.repeat(2));
 
 // display(filePath.raw`https://google.com`) /// dont understand
 
 //
-display(sentence.padStart(60, '*').padEnd(80, '*'));
+print(sentence.padStart(60, '*').padEnd(80, '*'));
 display(sentence.padStart(50, '*'));
-display(sentence.padEnd(70, '.'));
+print(sentence.padEnd(70, '.'));
 //
 
 //
 display(name1);
-display(name2)
+print(name2);
 display(name1.normalize('NFC') == name2.normalize('NFC'));
 //
 
-display(sentence.matchAll(sentence1)); /// dont understand
+print(sentence.matchAll(sentence1)); /// dont understand
 
 display(sentence.match(sentence1));
 
-display(sentence.localeCompare(nameObj)); /// dont understand
+print(sentence.localeCompare(nameObj)); /// dont understand
 
 display(sentence.link("https://google.com")); //Deprecated. Means, this feature is no longer recommended.
 
-display(sentence.lastIndexOf('dog'));
+print(sentence.lastIndexOf('dog'));
 
 display(sentence.italics()); // Deprecated. Means, this feature is no longer recommended
 
-display(sentence.isWellFormed()); // it will return boolean value. // output => true
+print(sentence.isWellFormed()); // it will return boolean value. // output => true
 
 display(sentence.indexOf('quick'));
 
-display(sentence.includes('The', 3)); // it will return the boolean data. it will print false. but if we remove position number then this output will be false. because 5th position there is no 'the' // output => true, 
+print(sentence.includes('The', 3)); // it will return the boolean data. it will print false. but if we remove position number then this output will be false. because 5th position there is no 'the' // output => true, 
 
 // display(sentence.fromCodePoint(9731, 9733, 9842, 0x2f804)) /// Dont understand
 
@@ -120,7 +120,7 @@ display(sentence.includes('The', 3)); // it will return the boolean data. it wil
 
 display(sentence.fontsize(5)); // Deprecated. Means, this feature is no longer recommended.
 
-display(sentence.fontcolor('red')); // Deprecated. Means, this feature is no longer recommended.
+print(sentence.fontcolor('red')); // Deprecated. Means, this feature is no longer recommended.
 
 display(sentence.fixed()); //Deprecated. Means, this feature is no longer recommended.
 
