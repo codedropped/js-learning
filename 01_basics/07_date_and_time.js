@@ -8,8 +8,11 @@ const display = function (abc) {
 let date = Date.now()
 display(date)
 
-let prevDate = Date("20-11-1990")
-display(prevDate)
+let utcTime = new Date(date)
+display(utcTime.toLocaleTimeString())
+
+let prevDate = new Date("1990-11-14")
+display(prevDate.getTime())
 
 let newDate = new Date().getDate()
 let newDate2 = new Date().getDay()
