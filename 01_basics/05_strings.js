@@ -21,39 +21,86 @@ const name = " Akon"
 const nameObj = new String(name)
 const newNameObj = new String('Barak Obama')
 const sentence = 'The quick brown fox jumps over the lazy dog.'
-const sentence1 = 'The quick brown fox jumps over the lazy dog.'
+const sentence1 = '       the        quick brown        fox jumps over the lazy dog.         '
 const name1 = '\u0041\u006d\u00e9\u006c\u0069\u0065';
 const name2 = '\u0041\u006d\u0065\u0301\u006c\u0069\u0065';
 const filePath = 'https://google.com'
+const number = 456;
 
 
 
 
-display(sentence.replaceAll('o', 'A'))
+display(sentence.valueOf())
 
-display(sentence.replace('the', 'A'))
+display(sentence1.trimStart())
 
-display(sentence.repeat(2))
+display(sentence1.trimEnd())
+
+display(sentence1.trim());
+
+display(sentence.toWellFormed());
+
+print(nameObj.toUpperCase());
+
+//
+display(number.toString());
+display(typeof (number.toString()));
+//
+
+display(nameObj.toLowerCase());
+
+display(sentence.toLocaleUpperCase())
+
+display(sentence.toLocaleLowerCase());
+
+display(sentence.sup()); // Deprecated. This feature is no longer recommended.
+
+display(sentence.substring(5, 25));
+
+display(sentence.substr(5, 20)); // Deprecated. This feature is no longer recommended.
+
+display(sentence.sub()); // Deprecated. This feature is no longer recommended.
+
+display(sentence.strike()); // Deprecated. This feature is no longer recommended.
+
+display(sentence.startsWith('f', 16)); // the output will be boolean. // output => true
+
+//
+display(sentence.split('a'));
+display(sentence.split(" "));
+//
+
+display(sentence.small()); //Deprecated. This feature is no longer recommended.
+
+display(sentence.slice(5, 25));
+
+display(sentence.search('brown'));
+
+display(sentence.replaceAll('o', 'A'));
+
+display(sentence.replace('the', 'A'));
+
+display(sentence.repeat(2));
 
 // display(filePath.raw`https://google.com`) /// dont understand
 
 //
-display(sentence.padStart(60, '*').padEnd(80, '*'))
-display(sentence.padStart(50, '*'))
-display(sentence.padEnd(70, '.'))
+display(sentence.padStart(60, '*').padEnd(80, '*'));
+display(sentence.padStart(50, '*'));
+display(sentence.padEnd(70, '.'));
 //
 
 //
-display(name1)
+display(name1);
 display(name2)
-display(name1.normalize('NFC') == name2.normalize('NFC'))
+display(name1.normalize('NFC') == name2.normalize('NFC'));
 //
 
-display(sentence.matchAll(sentence1)) /// dont understand
+display(sentence.matchAll(sentence1)); /// dont understand
 
-display(sentence.match(sentence1))
+display(sentence.match(sentence1));
 
-display(sentence.localeCompare(nameObj)) /// dont understand
+display(sentence.localeCompare(nameObj)); /// dont understand
 
 display(sentence.link("https://google.com")); //Deprecated. Means, this feature is no longer recommended.
 
@@ -61,9 +108,9 @@ display(sentence.lastIndexOf('dog'));
 
 display(sentence.italics()); // Deprecated. Means, this feature is no longer recommended
 
-display(sentence.isWellFormed()) // it will return boolean value. // output => true
+display(sentence.isWellFormed()); // it will return boolean value. // output => true
 
-display(sentence.indexOf('quick'))
+display(sentence.indexOf('quick'));
 
 display(sentence.includes('The', 3)); // it will return the boolean data. it will print false. but if we remove position number then this output will be false. because 5th position there is no 'the' // output => true, 
 
@@ -100,7 +147,4 @@ print(sentence.at(4));
 
 
 
-
-print(nameObj.toUpperCase());
-display(nameObj.toLowerCase());
 print(`Length of nameObj is ${nameObj.length}`);
