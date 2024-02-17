@@ -38,4 +38,5 @@ display(myarr.unshift("unshifted"))
 display(myarr)
 display(myarr.shift())
 display(myarr)
+display(myarr.length)
 
