@@ -49,9 +49,10 @@ display("")
 /******************* Random fun ******************** */
 
 let max = 10
+let min = 5
 
 for (i = 1; i < max; i++) {
 
-    var value = ((Math.floor((Math.random() * 5) + 1)))
+    var value = ((Math.floor((Math.random() * (max - min + 1)) + min)))
     display(value)
 }
