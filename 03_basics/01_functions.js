@@ -1,5 +1,5 @@
 
-const display = function (variable) { // this is anonymous function
+const display = function (variable) { // this is anonymous function or unnamed function
     console.log(variable);
 }
 
@@ -8,19 +8,19 @@ const display = function (variable) { // this is anonymous function
 // console.log("o");
 // console.log("n");
 
-function abc() { } //syntax for declaration of a type of function()
+function abc() { } //syntax for declaration of a named function()
 
 function name() {
     console.log("A");
     console.log("k");
     console.log("o");
     console.log("n");
-} // this is functions defination
+} // this is the named functions defination
 
 name // this is the reference of that function. it will not display any value. because it will not executed.
 name() // this is the functions execution
 
-function abc(a, b) { } // syntax for another type of function(). here a,b is the parameter
+function abc(a, b) { } // syntax for another type of named function(). here a,b is the parameter
 
 function calculation(num1, num2) {
     num1 + num2
@@ -40,12 +40,12 @@ console.log(add(2, 5)) // Now it will execute 100%. as per function
 
 //we can also write and return something like below
 
-function sum(num1, num2) {
+function sum(num1, num2 = 0) {
     let calculation = num1 + num2
     return calculation
 }
 
-console.log(sum(5, 5))
+console.log(sum(5))
 
 display("")
 
