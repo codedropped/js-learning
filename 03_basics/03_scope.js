@@ -58,7 +58,14 @@ if (true) {
 
 
 
-add1(5)
+print(add1(5))
 function add1(num) {
     return num + 1
 }
+
+
+// below function will send error
+// add2(5)
+// const add2 = function add2(num) {
+//     return num + 1
+// }
