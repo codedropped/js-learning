@@ -4,7 +4,7 @@ console.log("") // we are using this to make an space into the console to unders
 
 console.log(score); // output => 33
 console.log(typeof score); // typeof's systanx // output => number
-console.log(typeof(score)); // typeof as method // output => number
+console.log(typeof (score)); // typeof as method // output => number
 console.log("") // we are using this to make an space into the console to understand our output.
 // output => blank space
 
@@ -20,11 +20,11 @@ console.log("") // we are using this to make an space into the console to unders
 
 let stringToNumber = Number(text) // output => 55 (as number)
 console.log(stringToNumber) // output => 55
-console.log(typeof(stringToNumber)) // output => Number
+console.log(typeof (stringToNumber)) // output => Number
 console.log("") // we are using this to make an space into the console to understand our output
 // output => blank space
 
-let nullValue = null 
+let nullValue = null
 console.log(nullValue); // output => null
 console.log(typeof nullValue); // output => object
 console.log("") // we are using this to make an space into the console to understand our output
@@ -48,20 +48,20 @@ console.log(typeof alphaNumaric); // output => string
 console.log("") // we are using this to make an space into the console to understand our output
 // output => blank space
 
-let alphaNumaricToNumber = Number(alphaNumaric) 
+let alphaNumaricToNumber = Number(alphaNumaric)
 console.log(alphaNumaricToNumber); // output => NaN(Not a Number)
 console.log(typeof alphaNumaricToNumber); // output => number
 console.log("") // we are using this to make an space into the console to understand our output
 
 let amount = null
-let nullToNumber = Number(amount) 
+let nullToNumber = Number(amount)
 console.log(nullToNumber); // output => 0
 console.log(typeof nullToNumber); // output => number
 console.log("") // we are using this to make an space into the console to understand our output
 
 let nullToString = String(amount)
 console.log(nullToString); // output => null
-console.log(typeof(nullToString)); // output => string
+console.log(typeof (nullToString)); // output => string
 console.log("") // we are using this to make an space into the console to understand our output
 
 let bool = true
@@ -79,7 +79,7 @@ console.log(boolToString); // output => true
 console.log(typeof boolToString); // output => string
 console.log("") // we are using this to make an space into the console to understand our output
 
-let digit = 1 
+let digit = 1
 let digitToBool = Boolean(digit)
 console.log(digitToBool); // output => if 1 then true and if 0 then false
 console.log(typeof digitToBool); // output => boolean
@@ -102,18 +102,18 @@ console.log("") // we are using this to make an space into the console to unders
 
 let text1 = "Hello "
 let text2 = "Akon"
-let text3 = text1+text2
+let text3 = text1 + text2
 console.log(text3); // output => Hello Akon
 console.log("") // we are using this to make an space into the console to understand our output.
 
-console.log(1+2); // output => 3
-console.log(1+"2"); // output => 12
-console.log("1"+2); // output => 12
-console.log(1+2+"5"); // output => 35
-console.log("5"+2+1); // output => 521
+console.log(1 + 2); // output => 3
+console.log(1 + "2"); // output => 12
+console.log("1" + 2); // output => 12
+console.log(1 + 2 + "5"); // output => 35
+console.log("5" + 2 + 1); // output => 521
 console.log("") // we are using this to make an space into the console to understand our output.
 
-console.log(5+(2+96)-15*1/8); // output => 101.125
+console.log(5 + (2 + 96) - 15 * 1 / 8); // output => 101.125
 console.log("") // we are using this to make an space into the console to understand our output.
 
 console.log(true); // output => true
@@ -125,8 +125,8 @@ console.log(typeof +""); // output => number
 console.log("") // we are using this to make an space into the console to understand our output.
 
 let num1, num2, num3
-num1 = num2 = num3 = 2+2
-console.table([num1,num2,num3]) // output => index (0,1,2) values (4,4,4)
+num1 = num2 = num3 = 2 + 2
+console.table([num1, num2, num3]) // output => index (0,1,2) values (4,4,4)
 console.log("") // we are using this to make an space into the console to understand our output.
 
 let gameCount = 100
