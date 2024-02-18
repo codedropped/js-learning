@@ -55,3 +55,10 @@ if (true) {
 }
 
 // print(username)
+
+
+
+add1(5)
+function add1(num) {
+    return num + 1
+}
