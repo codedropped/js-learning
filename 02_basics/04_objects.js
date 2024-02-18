@@ -102,3 +102,12 @@ print(obj12)
 print(obj12[0].name)
 print(obj12[2].age)
 print(obj12[3])
+
+
+
+/**************************** Object De-Structuring ******************************** */
+
+
+const { email: mail } = tong //  here email is the key of tong object and we shorter the name mail from email. now we can call mail instead of email to get the value.
+
+print(mail)
