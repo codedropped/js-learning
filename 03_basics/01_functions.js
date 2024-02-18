@@ -55,6 +55,7 @@ function substract(a, b) {
     let a2b = a - b
     let num = 10
     return a2b
+    console.log("It is not working")
     let ab = ("value of ab : " + ab + num) // here this todo is not work. because in function after return keyword nothing will be executed. but if we use this todo before return keyword then, it will 100% executed
 }
 
@@ -66,19 +67,22 @@ function substract2(c, d) {
     let c2d = c - d
     let num = 20
     let cd = ("value of cd: " + (c2d + num)) // here it will 100% executed
+    console.log("It is working")
     return cd
 }
 
 display(substract2(5, 10))
 
+display("")
 
 function greeting(name) {
     // return `${name} you can do this` // we can use this or can use below
-    let blessing = `${name} you can do this`
+    let blessing = `${name} you can do `
     return blessing
 }
 
-display(greeting("Akon"))
+let programName = "JavaScript"
+display(greeting("Akon") + programName)
 
 
 
