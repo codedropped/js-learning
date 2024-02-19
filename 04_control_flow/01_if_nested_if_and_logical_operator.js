@@ -103,3 +103,33 @@ if (userLoggedIn && debitCard || age18) { // here logic shift to else
     print("")
     print(`user is below 18`)
 }
+
+
+//array checking
+
+const arr = [1, 2, 5, 1, 8]
+
+if (arr.length === 0) {
+    print("array is empty")
+}
+else if (arr.length < 3) {
+    print("first array value are: " + arr.slice(0, 3))
+}
+else {
+    print(`full array is: ${arr}`)
+    print(arr)
+}
+
+// object checking
+
+const obj = {
+    username: "Akon",
+    age: 4
+}
+
+if ((Object.keys(obj)).length === 0) {
+    print("Empty object")
+} else {
+    print(`Length of object is : ${((Object.keys(obj)).length)}`)
+    print(obj)
+}
