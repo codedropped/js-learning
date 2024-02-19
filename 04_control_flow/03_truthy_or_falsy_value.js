@@ -15,8 +15,8 @@ else {
 
 
 // truthy value
-// true, " ", "0", [], {},
+// true, " ", "0", [], {}, '0', function(){}
 
 
 // falsy value
-//false, "", null, undefined, 0, -0, BigInt 0n,  NaN
+//false, "",'', null, undefined, 0, -0, BigInt 0n,  NaN
