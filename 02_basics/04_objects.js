@@ -12,7 +12,7 @@ print(obj1)
 const tong = {}
 
 tong.id = "abc123"
-tong.name = "Akon"
+tong.nickName = "Akon"
 tong.age = 4
 tong.gender = "M"
 tong.email = "email@email.com"
