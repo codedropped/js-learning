@@ -1,0 +1,7 @@
+
+forof loop = directly can handle (strings, arrays, map object), 
+              can also use in object, but first need to convert to an array and then use forof loop
+
+forin loop = specially for object. but can also use array as well
+
+forEach loop = Only for array
