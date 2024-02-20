@@ -1,7 +1,9 @@
 
-forof loop = directly can handle (strings, arrays, map object), 
+# forof loop = directly can handle (strings, arrays, map object), 
               can also use in object, but first need to convert to an array and then use forof loop
 
-forin loop = specially for object. but can also use array as well
+# forin loop = specially for object. but can also use array as well
 
-forEach loop = Only for array
+# forEach loop = Only for array
+
+# return keyword = if we use () then we no need to use return keyword, but if we use {} then we must need to use return keyword
