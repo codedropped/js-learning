@@ -16,26 +16,22 @@ buttons.forEach((btn) => {
 
         const color = e.target.id
 
-        /*  if (e.target.id === 'gray') {
-              containerColor.style.backgroundColor = e.target.id
-              console.log(e.target.id)
-          };
-            if (e.target.id === 'green') {
-                containerColor.style.backgroundColor = e.target.id
-                console.log(e.target.id)
-            };
-            if (e.target.id === 'khaki') {
-                containerColor.style.backgroundColor = e.target.id
-                console.log(e.target.id)
-            };
-            if (e.target.id === 'blue') {
-                containerColor.style.backgroundColor = e.target.id
-                console.log(e.target.id)
-            };
-            if (e.target.id === 'yellow') {
-                containerColor.style.backgroundColor = e.target.id
-                console.log(e.target.id)
-            } */
+        // if (e.target.id === 'gray') {
+        //     containerColor.style.backgroundColor = e.target.id
+        //     console.log(e.target.id)
+        // } else if (e.target.id === 'green') {
+        //     containerColor.style.backgroundColor = e.target.id
+        //     console.log(e.target.id)
+        // } else if (e.target.id === 'khaki') {
+        //     containerColor.style.backgroundColor = e.target.id
+        //     console.log(e.target.id)
+        // } else if (e.target.id === 'blue') {
+        //     containerColor.style.backgroundColor = e.target.id
+        //     console.log(e.target.id)
+        // } else {
+        //     containerColor.style.backgroundColor = e.target.id
+        //     console.log(e.target.id)
+        // }
 
         switch (color) {
             case "gray":
