@@ -1,0 +1,191 @@
+/*
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    background-color: aliceblue;
+
+}
+
+.box {
+    margin: 20px;
+    padding: 10px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    background-color: antiquewhite;
+    border-radius: 15px;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.5);
+
+}
+
+.heading {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 15px;
+
+}
+
+.ageClass {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.genderClass {
+    margin-bottom: 15px;
+}
+
+.heightClass {
+    margin-bottom: 15px;
+}
+
+.weightClass {
+    margin-bottom: 15px;
+}
+
+.calBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 15px;
+}
+
+.calBtn p {
+    padding: 10px;
+    font-size: 15px;
+    color: brown;
+    text-align: center;
+    background-color: transparent;
+}
+
+input {
+    margin-left: 5px;
+}
+
+.result {
+    width: 300px;
+    height: fit-content;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 20px 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, .5);
+}
+
+.resultTxt {
+    font-size: 20px;
+    text-decoration: underline;
+    margin-bottom: 25px;
+}
+
+.resultDetails {
+    font-size: 25px;
+    color: red;
+    font-weight: 600;
+} */
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 50px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: aliceblue;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: khaki;
+    margin: 20px 10px;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 10px;
+
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+#height,
+#weight,
+button {
+    margin-bottom: 10px;
+}
+
+button {
+    margin: 15px 0px;
+    width: 100%;
+    height: 30px;
+    background: transparent;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+#results {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: red;
+
+}
+
+#weight-guide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 10px;
+    border-radius: 10px;
+
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+#weight-guide h3 {
+    padding: 10px;
+}
