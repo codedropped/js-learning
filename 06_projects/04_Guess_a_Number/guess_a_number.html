@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess a Number</title>
+
+    <link rel="stylesheet" href="guess_a_number.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            background-color: antiquewhite;
+        }
+
+        #wrapper {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            border-radius: 10px;
+            background-color: rgb(226, 221, 215);
+
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+
+        }
+
+        h1 {
+            margin: 20px 0px;
+        }
+
+        #wrapper p:nth-child(3),
+        #wrapper p:nth-child(5) {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .calculate {
+            background-color: khaki;
+            padding: 20px;
+            border-radius: 10px;
+
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        #guess {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            font-size: 25px;
+        }
+
+        #subt {
+            background-color: #161616;
+            color: #ffffff;
+            width: 200px;
+            height: 50px;
+            border-radius: 10px;
+            font-size: 20px;
+            border-style: none;
+            margin-top: 30px;
+        }
+
+        #guessField {
+            background-color: transparent;
+            width: 250px;
+            height: 50px;
+            border-radius: 10px;
+            font-size: 20px;
+            border-style: none;
+            text-align: center;
+            margin-top: 20px;
+
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .resultParas {
+            width: 75%;
+            margin: 20px 0px;
+            font-size: 25px;
+            background-color: aliceblue;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+        }
+
+
+        .resultParas :nth-child(2) {
+            margin: 5px 0px;
+            font-size: 20px;
+            padding: 5px;
+        }
+
+
+        .lowOrHi {
+            margin-top: 20px;
+            font-size: 25px;
+            background-color: rgb(70, 190, 190);
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div id="wrapper">
+            <h1>Number guessing game</h1>
+            <p>Try and guess a random number between</p>
+            <p>1 and 100.</p>
+            <p>You have 10 attempts to guess the...</p>
+            <p>RIGHT NUMBER.</p>
+            </br>
+            <div>
+                <form class="calculate">
+                    <label2 for="guessField" id="guess">Guess a number</label>
+                        <input type="text" id="guessField" class="guessField">
+                        <input type="submit" id="subt" value="Submit guess" class="guessSubmit">
+                </form>
+            </div>
+
+            <div class="resultParas">
+                <p>Previous Guesses:</p>
+                <p><span class="guesses"></span></p>
+                <p>Guesses Remaining: <span class="lastResult">10</span></p>
+                <p class="lowOrHi">Go Higher</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+
+    const randomNumber = (parseInt(Math.random() * 100 + 1))
+
+    const userInput = document.querySelector("#guessField")
+    const submit = document.querySelector("#subt")
+
+    const startOver = document.querySelector(".resultParas")
+
+    const guessSlot = document.querySelector(".guesses")
+    const remaining = document.querySelector(".lastResult")
+    const lowOrHi = document.querySelector(".lowOrHi")
+
+    const p = document.createAttribute('p')
+
+    // let start = prompt("Please enter your starting number")
+    // let end = prompt("Please enter your last number")
+
+    let start = 1
+    let end = 3
+
+    let prevGuess = []
+    let numGuess = 1
+
+    let playGame = true
+
+    if (playGame) {
+        submit.addEventListener('click', function (e) {
+            e.preventDefault()
+
+            const value = parseInt(userInput.value)
+            console.log(value)
+
+            validation(value)
+
+        })
+    }
+
+    function validation(value) {
+        if (isNaN(value)) {
+            alert("Please enter a valid number")
+        } else if (value < start) {
+            alert(`Please enter a number between ${start} and ${end}`)
+        } else if (value > end) {
+            alert(`Please enter a number between ${start} and ${end}`)
+        } else {
+            prevGuess.push(randomNumber)
+
+            if (numGuess === 11) {
+                displayValue(value)
+                displayMessage(`Game over, Your random number was ${randomNumber}`)
+                endGame()
+            } else {
+                displayValue(value)
+                checkGuess(value)
+            }
+        }
+
+    }
+
+    function checkGuess(value) {
+        if (value === randomNumber) {
+            displayMessage(`You Have Win the Game`)
+        } else if (value < randomNumber) {
+            displayMessage(`Go Higher`)
+        } else if (value > randomNumber) {
+            displayMessage(`Go lower`)
+        }
+    }
+
+    function displayValue(value) {
+        userInput.value = ""
+        numGuess++
+        guessSlot.innerHTML += `${value}, `
+        remaining.innerHTML = `${11 - numGuess}`
+    }
+
+    function displayMessage(value) {
+        //
+    }
+
+    function endGame() {
+
+    }
+
+    function newGame() {
+
+    }
+
+
+</script>
+<script src="guess_a_number.js"></script>
+
+</html>
