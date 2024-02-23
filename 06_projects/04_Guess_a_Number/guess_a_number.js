@@ -6,11 +6,20 @@ const submit = document.querySelector('#subt')
 const startNewGame = document.querySelector('#newGame')
 startNewGame.hidden = true
 
-
 const guesses = document.querySelector('.guesses')
 const remaining = document.querySelector(".lastResult")
 const lowOrHi = document.querySelector(".lowOrHi")
 
+// for popUp
+const wrapper = document.querySelector("#wrapper")
+const errorOkBtn = document.getElementById("errorOkBtn")
+const winnerOkBtn = document.getElementById("winnerOkBtn")
+const gameOverOkBtn = document.getElementById("gameOverOkBtn")
+
+// for error
+const errorPopUp = document.querySelector("#error")
+const winnerPopUp = document.querySelector("#winner")
+const gameOverPopUp = document.querySelector("#gameOver")
 
 let guessRemain = 1
 
@@ -20,25 +29,54 @@ if (playGame) {
     submit.addEventListener('click', (e) => {
         e.preventDefault()
 
-
         const guess = parseInt(guessNum.value)
         // validationCheck(guess)
         if (isNaN(guess)) {
-            alert(`Please enter a valid number`)
+            guessNum.value = ""
+            wrapper.style.filter = 'blur(10px)'
+            errorPopUp.hidden = false
+            errorOkBtn.addEventListener('click', function () {
+                errorPopUp.hidden = true
+                wrapper.style.filter = 'blur(0px)'
+            })
+
         } else if (guess < 1) {
-            alert(`Please enter the value from 1 to 100`)
+            guessNum.value = ""
+            wrapper.style.filter = 'blur(10px)'
+            errorPopUp.hidden = false
+            errorOkBtn.addEventListener('click', function () {
+                errorPopUp.hidden = true
+                wrapper.style.filter = 'blur(0px)'
+            })
         }
         else if (guess > 100) {
-            alert(`Please enter the value from 1 to 100`)
+            guessNum.value = ""
+            wrapper.style.filter = 'blur(10px)'
+            errorPopUp.hidden = false
+            errorOkBtn.addEventListener('click', function () {
+                errorPopUp.hidden = true
+                wrapper.style.filter = 'blur(0px)'
+            })
         }
         else {
             // progressChecking(guess)
-
             if (guessRemain === 10) {
-
                 if (guess === randomNumber) {
-
                     lowOrHi.innerHTML = (`Winner`)
+
+                    // for winner popup
+                    guessNum.value = ""
+                    wrapper.style.filter = 'blur(10px)'
+                    winnerPopUp.hidden = false
+                    const stat = document.createElement('p')
+                    stat.style.marginTop = "10px"
+                    stat.innerHTML = `Random Number: ${randomNumber}`
+                    winnerPopUp.appendChild(stat)
+                    winnerOkBtn.addEventListener('click', function () {
+                        winnerPopUp.hidden = true
+                        wrapper.style.filter = 'blur(0px)'
+                        winnerPopUp.removeChild(stat)
+                    })
 
                     // displayValue(guess)
                     guessNum.value = ""
@@ -47,7 +85,6 @@ if (playGame) {
                     remaining.innerHTML = `${11 - guessRemain}`
 
                     // endGame()
-
                     guessNum.setAttribute('disabled', "")
                     submit.hidden = true
                     startNewGame.hidden = false
@@ -57,9 +94,6 @@ if (playGame) {
                     p.innerHTML = `Random Number: ${randomNumber}`
                     document.querySelector(".resultParas").appendChild(p)
 
-                    // p.classList.add('button')
-                    // p.innerHTML = 'Start new game'
-                    // document.querySelector('.calculate').appendChild(p)
                     // startNewGame()
                     startNewGame.addEventListener('click', function (e) {
                         randomNumber = parseInt((Math.random() * 100) + 1)
@@ -82,6 +116,37 @@ if (playGame) {
 
                     lowOrHi.innerHTML = (`Game over`)
 
+                    // for gameover popup
+                    guessNum.value = ""
+                    wrapper.style.filter = 'blur(10px)'
+                    gameOverPopUp.hidden = false
+                    const gameOverStat = document.createElement('p')
+                    gameOverStat.style.marginTop = "10px"
+                    gameOverStat.innerHTML = `Random Number: ${randomNumber}`
+                    gameOverPopUp.appendChild(gameOverStat)
+
+                    // gameOverOkBtn.addEventListener('click', function () {
+                    //     gameOverPopUp.hidden = true
+                    //     wrapper.style.filter = 'blur(0px)'
+                    // })
+
+                    setTimeout(() => {
+                        gameOverPopUp.hidden = true
+                        wrapper.style.filter = 'blur(0px)'
+                        gameOverPopUp.removeChild(gameOverStat)
+                    }, 2000);
+
+                    const stat = document.createElement('p')
+                    stat.style.marginTop = "10px"
+                    stat.innerHTML = `Random Number: ${randomNumber}`
+                    winnerPopUp.appendChild(stat)
+                    winnerOkBtn.addEventListener('click', function () {
+                        winnerPopUp.hidden = true
+                        wrapper.style.filter = 'blur(0px)'
+                        winnerPopUp.removeChild(stat)
+                    })
+
+
                     // displayValue(guess)
                     guessNum.value = ""
                     guessRemain++
@@ -89,7 +154,6 @@ if (playGame) {
                     remaining.innerHTML = `${11 - guessRemain}`
 
                     // endGame()
-
                     guessNum.setAttribute('disabled', "")
                     submit.hidden = true
                     startNewGame.hidden = false
@@ -98,9 +162,7 @@ if (playGame) {
                     p.style.marginTop = "20px"
                     p.innerHTML = `Random Number: ${randomNumber}`
                     document.querySelector(".resultParas").appendChild(p)
-                    // p.classList.add('button')
-                    // p.innerHTML = 'Start new game'
-                    // document.querySelector('.calculate').appendChild(p)
+
                     // startNewGame()
                     startNewGame.addEventListener('click', function (e) {
                         randomNumber = parseInt((Math.random() * 100) + 1)
@@ -137,6 +199,21 @@ if (playGame) {
                 }
                 else if (guess === randomNumber) {
                     lowOrHi.innerHTML = (`Winner`)
+
+                    // for winnerPopUp
+                    guessNum.value = ""
+                    wrapper.style.filter = 'blur(10px)'
+                    winnerPopUp.hidden = false
+                    const stat = document.createElement('p')
+                    stat.style.marginTop = "10px"
+                    stat.innerHTML = `Random Number: ${randomNumber}`
+                    winnerPopUp.appendChild(stat)
+                    winnerOkBtn.addEventListener('click', function () {
+                        winnerPopUp.hidden = true
+                        wrapper.style.filter = 'blur(0px)'
+                        winnerPopUp.removeChild(stat)
+                    })
+
 
                     // endGame()
                     guessNum.setAttribute('disabled', "")
