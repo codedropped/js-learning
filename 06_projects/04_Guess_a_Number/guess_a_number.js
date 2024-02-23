@@ -181,9 +181,6 @@ if (playGame) {
 
                 }
 
-
-
-
             }
             else {
                 guessNum.value = ""
@@ -244,22 +241,4 @@ if (playGame) {
             }
         }
     })
-}
-
-function validationCheck(guess) {
-
-
-
-}
-
-function progressChecking(guess) {
-
-}
-
-function displayValue(guess) {
-
-}
-
-function displayMessage(guess) {
-    //  = `${guess}`
 }
