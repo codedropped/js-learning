@@ -136,17 +136,6 @@ if (playGame) {
                         gameOverPopUp.removeChild(gameOverStat)
                     }, 2000);
 
-                    const stat = document.createElement('p')
-                    stat.style.marginTop = "10px"
-                    stat.innerHTML = `Random Number: ${randomNumber}`
-                    winnerPopUp.appendChild(stat)
-                    winnerOkBtn.addEventListener('click', function () {
-                        winnerPopUp.hidden = true
-                        wrapper.style.filter = 'blur(0px)'
-                        winnerPopUp.removeChild(stat)
-                    })
-
-
                     // displayValue(guess)
                     guessNum.value = ""
                     guessRemain++
