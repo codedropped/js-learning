@@ -4,7 +4,6 @@ console.log(randomNumber)
 const guessNum = document.querySelector('#guessField')
 const submit = document.querySelector('#subt')
 const startNewGame = document.querySelector('#newGame')
-startNewGame.hidden = true
 
 const guesses = document.querySelector('.guesses')
 const remaining = document.querySelector(".lastResult")
@@ -199,7 +198,6 @@ if (playGame) {
                         wrapper.style.filter = 'blur(0px)'
                         winnerPopUp.removeChild(stat)
                     })
-
 
                     // endGame()
                     guessNum.setAttribute('disabled', "")
