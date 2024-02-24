@@ -99,21 +99,17 @@
 
     const startBgColor = function () {
         if (!colorChanging) {
-
             colorChanging = setInterval(changeBgColor, 1000)
         }
 
         function changeBgColor() {
             bodyBG.style.backgroundColor = randomColor()
         }
-
     }
 
     const stopBgColor = function () {
-
         clearInterval(colorChanging)
         colorChanging = null
-
     }
 
     startBtn.addEventListener('click', startBgColor)
