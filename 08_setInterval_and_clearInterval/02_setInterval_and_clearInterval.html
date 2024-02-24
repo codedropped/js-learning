@@ -77,21 +77,21 @@
     let interval;
     let dateUpdate;
 
-    const changeText = function () {
-        text.innerHTML = `The interval value of i is:  ${i}`;
+    const changeText = function (a) {
+        text.innerHTML = `The interval value of ${a} is:  ${i}`;
         i++;
     }
 
-    const date = (() => {
+    const dateAndTime = ((time) => {
         let date = new Date()
-        dateField.innerHTML = date.toLocaleString()
+        dateField.innerHTML = ` ${time} ` + date.toLocaleString()
     });
 
     document.querySelector(".start").addEventListener("click", () => {
-        interval = setInterval(changeText, 1000);
+        interval = setInterval(changeText, 1000, "I");
         console.log("interval is started");
 
-        dateUpdate = setInterval(date, 1000)
+        dateUpdate = setInterval(dateAndTime, 1000, "Today")
 
         return;
     })
