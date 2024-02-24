@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing Color</title>
+    <!-- <link rel="stylesheet" href="changing_color.css"> -->
+
+    <style>
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(red, green, yellow, pink, blue);
+            padding: 10px;
+            /* animation: rounded 2s linear infinite; */
+        }
+
+        /* @keyframes rounded {
+            100% {
+                rotate: 360deg;
+            }
+        } */
+
+        img {
+            /* visibility: hidden; */
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .start,
+        .stop {
+            padding: 10px;
+            width: 20%;
+            margin: 10px 0px;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: 600;
+            border: none;
+
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .start {
+            background: khaki;
+        }
+
+        .stop {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box">
+            <img src="rose.jpg" alt="">
+        </div>
+
+        <button class="start">Start</button>
+        <button class="stop">Stop</button>
+    </div>
+
+</body>
+
+<script>
+
+    const bodyBG = document.body
+    const startBtn = document.querySelector('.start')
+    const stopBtn = document.querySelector('.stop')
+
+    const randomColor = function () {
+        const hex = "0123456789ABCDEF"
+        let color = '#'
+
+        for (let i = 0; i < 6; i++) {
+            color += hex[Math.floor(Math.random() * 16)]
+        }
+        return color
+        console.log(color)
+    }
+
+    let colorChanging
+
+    const startBgColor = function () {
+        if (!colorChanging) {
+
+            colorChanging = setInterval(changeBgColor, 1000)
+        }
+
+        function changeBgColor() {
+            bodyBG.style.backgroundColor = randomColor()
+        }
+
+    }
+
+    const stopBgColor = function () {
+
+        clearInterval(colorChanging)
+        colorChanging = null
+
+    }
+
+    startBtn.addEventListener('click', startBgColor)
+    stopBtn.addEventListener('click', stopBgColor)
+
+</script>
+
+
+
+<!-- <script src="changing_color.js"></script> -->
+
+</html>
